@@ -10,7 +10,7 @@ request.onsuccess = function (event) {
   // when db is successfully created with its object store (from onupgradedneeded event above), save reference to db in global variable
   db = event.target.result;
 
-  // check if app is online, if yes run budgetD() function to send all local db data to api
+  // check if app is online, if yes run budgetDb() function to send all local db data to api
   if (navigator.onLine) {
     budgetDb();
   }
@@ -20,15 +20,13 @@ request.onerror = function (event) {
   //log error
   console.log("OMG, Error.", event.target.errorCode);
 };
-
 // This function will be executed if we attempt to submit a new budget item and there's no internet connection
-
 function saveRecord(record) {
-  //open a new transaction with the db with r & w permissions
   const transaction = db.transaction(["new_pending"], "readwrite");
   //access the object store for 'budgetPending'
   const budgetPendingObjectStore = transaction.objectStore("new_pending");
   // add record to your store with add method
+
   budgetPendingObjectStore.add(record);
 }
 

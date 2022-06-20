@@ -16,7 +16,6 @@ const FILES_TO_CACHE = [
   "/icons/icon-512x512.png",
   "/js/idb.js",
   "/js/index.js",
-  "/js/script.js",
   "/index.html",
   "/manifest.json",
 ];
