@@ -47,16 +47,20 @@
   <script src="./js/index.js"></script>
   <script src="./js/idb.js"></script>
   <!-- <script src="./dist/bundle.js" defer></script> -->
+  <script>
+    (function () {
+      if ("serviceWorker" in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register("service-worker.js")
+            .then(() => console.log("Service Worker registered successfully."))
+            .catch(error => console.log("Service Worker registration failed:", error));
+        })
+      }
+    })
+
+  </script>
 </body>
 
-<script>
-  (function () {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./service-worker.js")
-        .then(() => console.log("Service Worker registered successfully."))
-        .catch(error => console.log("Service Worker registration failed:", error));
-    }
-  })();
-</script>
+
 
 </html>

@@ -1,4 +1,4 @@
-console.log("Shit is installed and working");
+console.log("Tihs is installed and working");
 
 const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
