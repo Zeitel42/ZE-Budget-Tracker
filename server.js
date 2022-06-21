@@ -18,9 +18,9 @@ app.use(cors());
 
 app.use(express.static("public"));
 
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(MONGODB_URI || "mongodb: //localhost:3001/ZE-BUDGET-TRACKER", {
   useNewUrlParser: true,
-  useFindAndModify: false,
+  useUnifiedTopology: true,
 });
 
 // routes
