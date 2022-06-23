@@ -28,7 +28,7 @@ This app is deployed to Heroku and can be accessed here https://zebudgettracker4
 
 An easy to use budget tracking app that doesn't require internet access
 
-<img src="/images/zebudgettracker-scrnsht.png"/>
+<img src="./public/images/zebudgettracker-scrnsht.png"/>
 
 ## <h2 id="userLicense">**License**</h2>
 
